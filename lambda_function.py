@@ -21,10 +21,10 @@ notification = Message(auth_token=settings.discord_auth_token,
 
 def lambda_handler(event, context):
     """
-    1. Receive from data from adepdev.com.
-    2. Save event data in DynamoDb
-    3. Send update to discord channel
-    4. send and email to chase.reidinger@adepev.com
+    1. Receive from data from the lambda event.
+    2. DynamoDB: Stores incomming form data
+    3. Discord: Posts notification to a channel
+    4. Mailgun: sends notification
 
     args:
         - event: Event data that has trigged the lambda function
